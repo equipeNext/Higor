@@ -4,15 +4,42 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box
+    
 }
+
+
 
 html {
     background-color: #BAD1C2;
-}
+     
 
-section {
-    background-color: #BAD1C2;
 }
+.content:before {
+            content: "";
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            display: flex;
+            background-image: url('/img/divaris-shirichena-p86VAyG6Drs-unsplash.jpg');
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            -webkit-filter: blur(7px);
+            -moz-filter: blur(7px);
+            -o-filter: blur(7px);
+            -ms-filter: blur(7px);
+            filter: blur(7px);
+        }
+        
+        .content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+  }
 
 
 nav .navbar-brand {
@@ -50,7 +77,8 @@ header p {
 }
 
 .Pick-up {
-    width: 100px;
+    width: 100%;
+    margin: 5px;
     height: 3em;
     border-radius: 50px;
     font-size: 15px;
@@ -130,7 +158,7 @@ p {
     justify-content: space-evenly;
     margin-left: 50px;
     margin-right: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
 
 
 }
@@ -164,12 +192,14 @@ p {
 
 
 .hr-linha {
-    display: block;
-    width: 100%;
-    height: 1px;
-    border: 2px;
-    background-color: #7e7d7d;
+    width: 84%;
+    height: 3px;
+    border: 1px;
+    background-color: #ffffff;
     margin-bottom: 50px;
+    margin-left: 8%;
+    
+
 }
 
 .nome-membros {
@@ -320,6 +350,7 @@ nav {
 
 
 footer {
+    position: fixed;
     background-color: #6F2BF6;
     bottom: 0;
     width: 100%;
@@ -405,11 +436,12 @@ footer {
 
 
 
-@media (max-width: 1700px) {
+@media (max-width: 1400px) {
     .card-geral {
         flex-direction: column;
         align-items: center;
-        height: 250vh;
+        height: 200vh;
+        width: 60%;
     }
 
     nav .navbar-brand {
@@ -435,7 +467,7 @@ footer {
 
 
     .card{
-        width: 70%;
+        width: 80%;
     }
     .user-picture {
         width: 5rem;
