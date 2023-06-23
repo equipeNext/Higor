@@ -1,54 +1,102 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 html,
-body {
+body  {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
 }
 
 header {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    top: 0;   
+    top: 0;
+   
+}
+ .navbar-brand {
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #111;
 }
 
 .container-fluid {
-    max-width: 71%;
-
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
-.btn-outline-success {
-    color: black;
-    margin: 5px;
-    border-color: black;
+nav {
+    background-color: #f1f1f1;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    
+
+
+
 }
+.d-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.btn-outline {
+    --primary-color: #ccc;
+    --secondary-color: #000;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    cursor: pointer;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    margin: 10px;
+    font-weight: bold;
+  }
+  
+  
+  .btn-outline:hover {
+    background-color:#000000;
+    color: #fff;
+    
+  }
 
 .tab {
     display: flex;
-    justify-content:center;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 50px auto;
-    width: 100%;
-    max-width: 70%;
-    align-items: center;
-    margin-top: 100px;
-    height: 50vh;
-    border: 1px solid #ccc;
+    max-width: 80%;
+    margin-top: 300px;
+    border: 1px solid #000000;
     background-color: #f1f1f1;
 }
 
-
-
 /* Estilos para os botões das abas */
 .tab button {
+    flex: 1 1 100px;
+    font-size: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    width: 100% !important;
-    height: 50%;
     background-color: inherit;
     outline: none;
-    border: none;
+    border: solid 1px #ccc;
     cursor: pointer;
-    padding: 80px 10px;
+    padding: 50px 10px;
     transition: background-color 0.3s;
 }
 
@@ -59,10 +107,105 @@ header {
 
 /* Estilos para o conteúdo das abas */
 .tabcontent {
-    display: none;
     margin: 50px auto;
-    max-width: 70%;
-    padding: 20px;
+    max-width: 80%;
+    height: 100px;
+    padding-bottom: 40px;
     border: 1px solid #ccc;
     border-top: none;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    border-top: solid 1px #ccc;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin: 0 auto;
+    max-width: 80%;
+    
+}
+
+.footer-copyright {
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-social-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social-links a {
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.footer-social-links a:hover {
+    color: #595959;
+}
+
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .container-fluid {
+        max-width: 85%;
+    }
+
+    .tab button {
+        flex-basis: calc(60% - 20px);
+        max-width: 100%;
+
+    }
+
+    .tabcontent {
+        max-width: 80%;
+    }
+
+    .footer {
+        position: relative;
+        bottom: 0;
+        
+    }
+    .footer-content {
+        flex-direction: column;
+        height: 150px;
+        justify-content: center;
+      }
+      
+      .footer-social-links {
+        margin-top: 5px;
+
+      }
+      .container-fluid {
+        flex-direction: row;
+        align-items: center;
+      
+      }
+    
+      .navbar-brand {
+        margin-bottom: 10px; 
+         font-size: 10px;
+      }
+    
+      .btn-outline {
+        margin: 30px 0;
+      }
 }
