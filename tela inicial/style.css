@@ -1,0 +1,68 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;   
+}
+
+.container-fluid {
+    max-width: 71%;
+
+}
+
+.btn-outline-success {
+    color: black;
+    margin: 5px;
+    border-color: black;
+}
+
+.tab {
+    display: flex;
+    justify-content:center;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 70%;
+    align-items: center;
+    margin-top: 100px;
+    height: 50vh;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+
+
+/* Estilos para os botões das abas */
+.tab button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100% !important;
+    height: 50%;
+    background-color: inherit;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 80px 10px;
+    transition: background-color 0.3s;
+}
+
+/* Mudar a cor de fundo do botão quando estiver ativo */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Estilos para o conteúdo das abas */
+.tabcontent {
+    display: none;
+    margin: 50px auto;
+    max-width: 70%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
