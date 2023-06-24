@@ -127,20 +127,8 @@ nav {
 }
 
 /* Mudar a cor de fundo do botão quando estiver ativo */
-.tab button.active {
+.tab button:hover {
     background-color: #ccc;
-}
-
-/* Estilos para o conteúdo das abas */
-.tabcontent {
-    display: none;
-    margin: 50px auto;
-    max-width: 80%;
-    height: 100px;
-    padding-bottom: 40px;
-    border: 1px solid #ccc;
-    border-top: none;
-    margin-bottom: 150px;
 }
 
 body::-webkit-scrollbar {
@@ -225,6 +213,7 @@ body::-webkit-scrollbar {
 
     .footer {
         position: relative;
+        width: 125%;
         bottom: 0;
         
     }
