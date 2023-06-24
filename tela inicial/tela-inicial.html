@@ -17,13 +17,9 @@
           <h1>Bem-vindo</h1>
         </a>
         <form class="d-flex" role="search">
-          <button class="btn-outline" type="submit">
-            <div class="arrow-wrapper">Menu principal
-          </button>
-          <button class="btn-outline" onclick="logout()">
-            <div class="arrow-wrapper"><a class="btn-sair" href="/index.html">Sair</a></div>
-          </button>
-          
+          <div class="arrow-wrapper"><button class="btn-outline" type="submit"><a class="btn-sair"href="/tela-inicial.html">Home</a></button></button>
+          </div>
+          <div class="arrow-wrapper"><button class="btn-outline" onclick="logout()"><a class="btn-sair"href="/index.html">Sair</a></button></div>
         </form>
       </div>
     </nav>
@@ -151,14 +147,14 @@
       for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
       document.getElementById(tabName).style.display = "block";
       evt.currentTarget.className += " active";
-    
-  }
 
-  function logout() {
-  alert("Logout com sucesso");
-  window.location.href = "/";
-  return false;
-  }
+    }
+
+    function logout() {
+      alert("Logout com sucesso");
+      window.location.href = "/";
+      return false;
+    }
   </script>
 </body>
 
